@@ -1,22 +1,7 @@
 'use strict';
 
-import React, {
-  StyleSheet,
-  Text
-} from 'react-native';
+import Render from './ScreenRender.native';
 
-export default function (props, state) {
-  return (
-    <Text style={styles.screen}>
-      {state.displayScreen}
-    </Text>
-  );
+export default function () {
+    return Render.call(this, this.props, this.state);
 }
-
-var styles = StyleSheet.create({
-  screen: {
-    color: '#190d08',
-    fontSize: 70,
-    fontWeight: '200'
-  }
-});
